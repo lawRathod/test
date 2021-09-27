@@ -1,0 +1,15 @@
+name: "Test workflow"
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    name: Printing github object
+    steps:
+      - name: print
+        run: |
+          echo ${{ github }}
